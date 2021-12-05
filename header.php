@@ -3,6 +3,8 @@ session_start();
 error_reporting( E_ALL );
 ini_set('display_errors', 1);
 
+include "db_init.php";
+
 if ( isset($_GET["logout"] ))
 {
     unset($_SESSION["user_id"]);

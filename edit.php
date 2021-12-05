@@ -1,8 +1,6 @@
 <?php
 include "header.php";
 
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
-
 if ( isset($_POST["youtube_id"]) )
 {
     $str_sql = "UPDATE tbl_songs SET " .

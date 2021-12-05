@@ -1,8 +1,6 @@
 <?php
 include "header.php";
 
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
-
 if ( isset($_GET["ytid"]) and isset($_GET["qval"] ))
 {
     if ( ! isset($_GET["action"]) )

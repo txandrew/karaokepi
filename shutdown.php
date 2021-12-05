@@ -1,8 +1,6 @@
 <?php
 include("header.php");
 
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
-
 $str_msg = "";
 if ( isset($_GET["CMD"]) )
 {

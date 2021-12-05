@@ -1,6 +1,5 @@
 <?php
 include "header.php";
-include "db_init.php";
 
 if ( isset($_POST["youtube_url"]) )
 {

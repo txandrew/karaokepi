@@ -2,7 +2,7 @@
 session_start();
 error_reporting( E_ALL );
 
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
+include "db_init.php";
 
 if ( ! isset($_GET["logout"]) )
 {

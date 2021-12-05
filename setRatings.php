@@ -1,11 +1,13 @@
 <?php
 session_start();
 
+include "db_init.php";
+
 if ( ! isset($_SESSION["user_id"]) )
 {
     header('Location: login.php');
 }
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
+
 $str_sql = "DELETE FROM tbl_ratings 
             WHERE 
                 youtube_id = '" . $_GET["youtube_id"] . "' and 

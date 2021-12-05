@@ -1,7 +1,6 @@
 <?php
 include "header.php";
 
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
 $str_sql = "select count(*) queue_size, sum(if(queued_by = '" . $_SESSION["user_id"] . "',1,0)) my_queue from tbl_queue";
 $qry_queue_sz = $conn->query($str_sql);
 $row = $qry_queue_sz->fetch_assoc();

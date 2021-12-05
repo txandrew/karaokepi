@@ -205,7 +205,7 @@ function playVideo(int_queue)
 <table>
 <tr>
 <td width="31%" style='text-align:center;vertical-align:top'>
-<h1>KaraokePi</h1><img src="qr_code.png" />
+<h1>KaraokePi</h1><img src="qr_code.png" style="width:100px"/>
 <hr>
 <div id="td_list">
 <button onclick="getSongList();getStatus();">Start</button>
