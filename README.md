@@ -44,7 +44,13 @@ exit
 Next we are going to setup the Karaoke Database itself.
 ```
 mysql -u kpi-server -p
-CREATE DATABASE karaokepi
+CREATE DATABASE karaokepi;
+exit
+```
+
+### Setup the PHP MySQL Library
+```
+sudo apt install php8.0-mysql -y
 ```
 
 ### Setup the Karaoke Application
