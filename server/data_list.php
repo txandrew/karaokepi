@@ -1,6 +1,6 @@
 <?php
 
-include "db_init.php";
+include "../db_init.php";
 
 mysqli_set_charset($conn, 'utf8');
 

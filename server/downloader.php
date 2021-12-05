@@ -4,7 +4,7 @@ header ("Content-Type: text/plain");
 
 $str_arg = " -o '/var/www/html/karaoke/videos/%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --cache-dir /var/karaoke/youtube-dl/ "; #136
 
-include "db_init.php";
+include "../db_init.php";
 mysqli_set_charset($conn, 'utf8');
 
 $conn->query("INSERT INTO tbl_messages (EXEC_FILE, MSG_TYPE, MESSAGE) values ('downloader.php','youtube-dl arg','youtube-dl" . $str_arg . $rec_song["youtube_id"] . " -f " . $rec_song["format"]);

@@ -2,7 +2,7 @@
     error_reporting( E_ALL );
     ini_set('display_errors', 1);
     
-    include "db_init.php";
+    include "../db_init.php";
 
 
     if (isset($_GET["CMD"]))
