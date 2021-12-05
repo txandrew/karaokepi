@@ -10,7 +10,7 @@
         switch ($_GET["CMD"])
         {
         case "start":
-            shell_exec("/var/www/html/karaoke/server/karaoke-pi.py >> /dev/null &");
+            shell_exec("/var/www/html/karaokepi/server/karaoke-pi.py >> /dev/null &");
             header("Location: local.php"); 
             break;
 

@@ -17,7 +17,7 @@ if ( isset($_GET["CMD"]) )
         shell_exec("killall -9 omxplayer.bin");
         break;
     case "s":
-        shell_exec("/var/www/html/karaoke/server/karaoke-pi.py >> /dev/null &");
+        shell_exec("/var/www/html/karaokepi/server/karaoke-pi.py >> /dev/null &");
         break;
     case "q":
         $conn->query("UPDATE tbl_status SET status='QUIT';");
