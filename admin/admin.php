@@ -19,10 +19,6 @@ elseif ( isset( $_GET["cmd"] ) )
     {
         system ("sudo shutdown -r 0");
     }
-    elseif ( $_GET["cmd"] == "killpi" )
-    {
-        shell_exec("killall -9 karaoke-pi.py");
-    }
     elseif ( $_GET["cmd"] == "killvid" )
     {
         shell_exec("killall -9 omxplayer.bin");

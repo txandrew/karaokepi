@@ -12,13 +12,6 @@ if ( isset($_GET["CMD"]) )
     case "r":
         system ("sudo shutdown -r 0");
         break;
-    case "c":
-        shell_exec("killall -9 karaoke-pi.py");
-        shell_exec("killall -9 omxplayer.bin");
-        break;
-    case "s":
-        shell_exec("/var/www/html/karaokepi/server/karaoke-pi.py >> /dev/null &");
-        break;
     case "q":
         $conn->query("UPDATE tbl_status SET status='QUIT';");
         break;
@@ -77,9 +70,6 @@ if ( window.location.search.length > 0 )
 
 <button onclick="sendCmd('h')">Shutdown Pi</button><br /><br />
 <button onclick="sendCmd('r')">Reboot Pi</button><br /><br />
-<button onclick="sendCmd('q')">Quit Karaoke-Pi</button><br /><br />
-<button onclick="sendCmd('c')">Kill Karaoke Pi</button><br /><br />
-<button onclick="sendCmd('s')">Start Karaoke</button><br /><br />
 
 <h1>Send Email Shortcuts To:</h1>
 <div style="width:80%;float:right">
