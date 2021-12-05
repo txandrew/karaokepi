@@ -186,7 +186,7 @@ else
 </table>
 <input type='hidden' name='added_by' value='<?php echo $_SESSION["user_id"]; ?>' />
 </form>
-<button type="submit" form="add_form" value="Download"><canvas id="icn_Down" width="50px" height="50px">Download</canvas></button>
+<button type="submit" form="add_form" value="Download"><i class="material-icons" style="font-size:80px;color:white">download</i></button>
 <script>icon_Download("icn_Down");</script>
 </div>
 </body>
