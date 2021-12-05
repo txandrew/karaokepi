@@ -2,8 +2,8 @@
 A fun karaoke system for parties that uses a Raspberry Pi to download, queue, and play videos.
 ## About
 The Karaoke-Pi downloads youtube videos and stores them on a raspberry pi, which and can be played via an HDMI port. The Karaoke-Pi is accessed via mobile phones where each participant can queue videos, and the pi will play the videos in an alternating order. A display is created for a raspberry pi 7.5 inch touch screen.
-## Requirements
 
+## Installation
 Before installing any applications, it is always best to update your raspberry pi's packages. For more details, take a look at the [Raspberry Pi: Install Apache + MySQL + PHP (LAMP Server)](https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/)
 
 1. Update your repository
@@ -13,6 +13,7 @@ Before installing any applications, it is always best to update your raspberry p
 5. Setup Karaoke-Pi Application
 6. **Optional** Install PHPMyAdmin
 
+### Update the Repository
 ```
 sudo apt-get update
 sudo apt-get upgrade
