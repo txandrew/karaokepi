@@ -88,9 +88,9 @@ function draw_Ratings()
 </script>
 <h1><?php echo $row["status"]; ?></h1>
 <div style="text-align:center">
-<a href="#" onclick="sendCmd('PAUSED');"><i class="material-icons" style="font-size:80px">pause_circle_filled</i></a>
-<a href="#" onclick="sendCmd('PLAYED');"><i class="material-icons" style="font-size:80px">pause_circle_filled</i></a>
-<a href="#" onclick="sendCmd('SKIPPING');"><i class="material-icons" style="font-size:80px">pause_circle_filled</i></a>
+<a href="#" onclick="sendCmd('PAUSED');"><i class="material-icons" style="font-size:80px;color:white">pause_circle_filled</i></a>
+<a href="#" onclick="sendCmd('PLAYED');"><i class="material-icons" style="font-size:80px;color:white">pause_circle_filled</i></a>
+<a href="#" onclick="sendCmd('SKIPPING');"><i class="material-icons" style="font-size:80px;color:white">pause_circle_filled</i></a>
 </div>
 <h2>
 <?php 
