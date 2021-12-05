@@ -57,7 +57,7 @@ if ( isset($_POST["youtube_url"]) )
 elseif ( isset($_SESSION["youtube_id"] ) )
 {
     {
-        $str_sql = "INSERT INTO tbl_songs (youtube_id,title,artist,genre,song_type,added_by,format,downloaded) VALUES (" . 
+        $str_sql = "INSERT INTO tbl_songs (youtube_id,title,artist,genre,song_type,added_by,downloaded,format) VALUES (" . 
             "'" . $_SESSION["youtube_id"] . "'," .
             "'" . $_SESSION["title"] . "'," .
             "'" . $_SESSION["artist"] . "'," .
