@@ -10,7 +10,7 @@ Before installing any applications, it is always best to update your raspberry p
 2. Install Appache Web Server
 3. Install PHP Server-Side Scripting
 4. Install MySQL Database
-5. Clone this Repository
+5. Setup Karaoke-Pi Application
 6. **Optional** Install PHPMyAdmin
 
 ```
@@ -31,11 +31,26 @@ sudo apt install php -y
 
 ### MySQL Database
 ```
-sudo apt install mariadb-server php-mysql
+sudo apt install mariadb-server php-mysql -y
 ```
 
-### Setup the Karaoke Database
+We need to setup a user account for the Karaoke Database. __It is recommended to change the password after IDENTIFIED BY,__ example below is karaoke
 ```
+mysql -u root
+GRANT ALL PRIVILEGES ON *.* TO 'kpi-server'@'localhost' IDENTIFIED BY 'karaoke';
+exit
+```
+
+Next we are going to setup the Karaoke Database itself.
+```
+mysql -u kpi-server -p
+CREATE DATABASE karaokepi
+```
+
+### Setup the Karaoke Application
+Navigate to the www folder that you want to host your karaoke page from. After the installation of apache, the default web location is at /var/www/html. You may want to ```mkdir``` your own folder, if you have multiple programs on your server.
+```
+git clone https://github.com/txandrew/karaokepi.git
 cd setup
 mysql -u kpi-server -p karaoke < file.sql
 ```
