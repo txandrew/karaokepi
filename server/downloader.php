@@ -7,7 +7,7 @@ $str_arg = " -o '/var/www/html/karaoke/videos/%(id)s.%(ext)s' -f 'bestvideo[ext=
 include "../db_init.php";
 mysqli_set_charset($conn, 'utf8');
 
-$conn->query("INSERT INTO tbl_messages (EXEC_FILE, MSG_TYPE, MESSAGE) values ('downloader.php','youtube-dl arg','youtube-dl" . $str_arg . $rec_song["youtube_id"] . " -f " . $rec_song["format"]);
+//$conn->query("INSERT INTO tbl_messages (EXEC_FILE, MSG_TYPE, MESSAGE) values ('downloader.php','youtube-dl arg','youtube-dl" . $str_arg . $rec_song["youtube_id"] . " -f " . $rec_song["format"]);
 
 $str_sql = "SELECT * FROM tbl_songs WHERE downloaded<1 order by added_time;";
 $qry_songs = $conn->query($str_sql);
