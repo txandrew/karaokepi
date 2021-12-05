@@ -62,6 +62,18 @@ cd setup
 mysql -u kpi-server -p karaoke < file.sql
 ```
 
+Give ```www-data``` permissions to the videos folder.
+
+```
+sudo setfacl -m u:www-data:rwx karaokepi/videos/
+
+sudo mkdir /var/karaoke
+sudo mkdir /var/karaoke/youtube-dl
+sudo setfacl -R -m u:www-data:rwx /var/karaoke
+```
+
+Another note, there are several folders, and if you change the path from ```/var/www/html/karaokepi```, you will need to search and replace those files
+
 ### Optional - phpMyAdmin
 
 ```
