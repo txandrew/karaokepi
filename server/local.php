@@ -2,7 +2,7 @@
     error_reporting( E_ALL );
     ini_set('display_errors', 1);
     
-    $conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
+    include "db_init.php";
 
 
     if (isset($_GET["CMD"]))

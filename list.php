@@ -93,7 +93,7 @@ function send_Ratings(int_row)
 </script>
 <?php
 
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
+include "db_init.php";
 
 mysqli_set_charset($conn, 'utf8');
 

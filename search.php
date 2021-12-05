@@ -84,7 +84,7 @@ function queue_Random()
 </div>
 <?php
 
-$conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
+include "db_init.php";
 mysqli_set_charset($conn, 'utf8');
 
 $str_sql = "select count(*) queue_size, sum(if(queued_by = '" . $_SESSION["user_id"] . "',1,0)) my_queue from tbl_queue";

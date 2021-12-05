@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost","kpi-karaoke","karaokepi","karaoke");
+include "db_init.php";
 mysqli_set_charset($conn, 'utf8');
 
 $str_sql = "SELECT * FROM tbl_status;";

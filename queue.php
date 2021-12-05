@@ -3,7 +3,7 @@ include "header.php";
 
 if ( isset($_GET["youtube_id"]) )
 {
-    $conn = new mysqli("localhost","kpi-server","karaokepi","karaoke");
+    include "db_init.php";
     
     $str_sql = "SELECT COUNT(*) usr_count FROM tbl_users;";
     $qry_cnt = $conn->query($str_sql);
