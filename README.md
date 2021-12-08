@@ -80,11 +80,11 @@ Another note, there are several folders, and if you change the path from ```/var
 sudo apt install phpmyadmin -y
 ```
 
-## To Do
-The following is a list of improvements/bugs that need to be applied.
-1. Add Delay Screens 
-2. Add Player as a Service
-3. Add PIP Installer
+## Updating Karaoke Pi
+To update your software too the latest published version, navigate to you www folder for karaoke
+```
+git pull
+```
 
 # PHP API
 ## add.php
