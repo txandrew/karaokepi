@@ -128,6 +128,12 @@ if ( $qry_songs->num_rows > 0 )
 {
     while ( $rec_song = $qry_songs->fetch_assoc()) 
     {
+        $str_thumbnail = 'thumbnails/notfound.jpg';
+        if ( file_exists('thumbnails/' . $rec_song["youtube_id"] . '.jpg'))
+        {
+            $str_thumbnail_path = 'thumbnails/' . $rec_song["youtube_id"] . '.jpg';
+        }
+
         echo "\n\n";
         echo "<button>\n";
         echo " <table width='100%'>";
