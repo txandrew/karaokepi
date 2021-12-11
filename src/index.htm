@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Karaoke Pi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body ng-app="kpi-app">
+
+<p><a href="#/!">Main</a></p>
+
+<a href="#!add">Download Song</a>
+<a href="#!search">Search Songs</a>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("kpi-app", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm"
+    })
+    .when("/add", {
+        templateUrl : "app/components/add-song/add-song.component.html"
+    })
+    .when("/search", {
+        templateUrl : "app/components/search-songs/search-songs.component.html"
+    });
+});
+</script>
+
+<p>Click on the links to navigate to "red.htm", "green.htm", "blue.htm", or back to "main.htm"</p>
+</body>
+</html>
+
+
+<!--
+
+      <a href="#!add">Download Song</a>
+      <a href="#!search">Search Songs</a>
+      <div ng-view>
+        
+
+      </div>
+
+      <script>
+        var app = angular.module('kpi-app', ["ng-route"]);
+        app.config(function ($routeProvider) {
+          $routeProvider
+            .when("/add",{
+              templateUrl : "components/add-song.html"              
+            })
+            .when("/search",{
+              templateUrl : "components/search-songs.html"
+            });
+        });
+      
+      </script>
+    </body> 
+
+</html>
+
+-->
