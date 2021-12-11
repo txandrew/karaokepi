@@ -72,13 +72,25 @@ sudo mkdir /var/karaoke/youtube-dl
 sudo setfacl -R -m u:www-data:rwx /var/karaoke
 ```
 
+Create a ```db_init.php``` file that will store the password for you DB access
+```php
+<?php
+$conn = new mysqli("localhost","userid","database","password");
+?>
+```
+
 Another note, there are several folders, and if you change the path from ```/var/www/html/karaokepi```, you will need to search and replace those files
 
 ### Optional - phpMyAdmin
 
+The phpMyAdmin module gives you a web based user interface to managing your database.
 ```
 sudo apt install phpmyadmin -y
 ```
+
+## Notes
+
+If you are trying to access your karaokepi device, you will want to use a Dynamic DNS service if your ISP does not give you a static IP; however, note that many ISPs block port 80 (HTML). You will need to use an alternate port, and setup your router to change it to port 80.
 
 ## To Do
 The following is a list of improvements/bugs that need to be applied.
