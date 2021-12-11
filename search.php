@@ -131,7 +131,7 @@ if ( $qry_songs->num_rows > 0 )
         $str_thumbnail = 'thumbnails/notfound.jpg';
         if ( file_exists('thumbnails/' . $rec_song["youtube_id"] . '.jpg'))
         {
-            $str_thumbnail_path = 'thumbnails/' . $rec_song["youtube_id"] . '.jpg';
+            $str_thumbnail = 'thumbnails/' . $rec_song["youtube_id"] . '.jpg';
         }
 
         echo "\n\n";
@@ -146,7 +146,7 @@ if ( $qry_songs->num_rows > 0 )
         echo "    <input type='hidden' id='desc_" . $rec_song["youtube_id"] . "' value='" . $rec_song["title"] . " by " . $rec_song["artist"] . "' />";
         echo "   </td>";
         echo "   <td style='text-align:right'>\n";
-        echo "    <img style='width:100px' src='thumbnails/" . $rec_song["youtube_id"] . ".jpg' alt='" . $rec_song["title"] . "' />";
+        echo "    <img style='width:100px' src='thumbnails/$str_thumbnail.jpg' alt='" . $rec_song["title"] . "' />";
         echo "   </td>";
         echo "  </tr>";
         echo " </table>";
