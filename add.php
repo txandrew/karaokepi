@@ -85,6 +85,7 @@ elseif ( isset($_SESSION["youtube_id"] ) )
         if ( $conn->query($str_sql) === TRUE )
         {
             exec ("php /var/www/html/karaokepi/server/downloader.php > /dev/null 2>&1 &");
+            exec ("wget https://img.youtube.com/vi/". $_SESSION["youtube_id"] . "/default.jpg -O " . $_SESSION["youtube_id"] . ".jpg  &");
             $_SESSION["message"] .= "Song Successfully Added\n";
             Header("Location: " . $new_page);
         } 
